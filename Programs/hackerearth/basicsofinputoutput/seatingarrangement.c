@@ -1,59 +1,37 @@
 #include<stdio.h>
-int main()
-{
-int t,n,p;
-scanf("%d",&t);
-for(int i=1;i<=t;i++)
-{
-scanf("%d\n",&n);
-if(n%6==1)
-{
-n=n+11;
-if(n%12==6)
-n=n-12;
-printf("\n%d WS", n);
-continue;
-}
-if(n%6==2)
-{
-n=n+9;
-if(n%12==5)
-n=n-12;
-printf("\n%d MS", n);
-     continue;
-}
-if(n%6==3)
-{
-n=n+7;
-if(n%12==4)
-n=n-12;
-printf("\n%d AS", n);
-        continue;
-}
-if(n%6==4)
-{
-n=n+5;
-if(n%12==3)
-n=n-12;
-printf("\n%d AS", n);
-        continue;
-}
-if(n%6==5)
-{
-n=n+3;
-if(n%12==2)
-n=n-12;
-printf("\n%d MS", n);
-        continue;
-}
-if(n%6==0)
-{
-n=n+1;
-if(n%12==1)
-n=n-12;
-printf("\n%d WS", n);
-        continue;
-}
-}
-return 0;
+int main(){
+        int t,n,i;
+        scanf("%d",&t);
+        for(i = 0;i<t;i++)
+        
+        {
+                scanf("%d",&n);
+                switch(n%12){
+                
+                case 1: printf("%d WS\n",n+11);
+                break;
+                case 2: printf("%d MS\n",n+9);
+                break;
+                case 3: printf("%d AS\n",n+7);
+                break;
+                case 4: printf("%d AS\n",n+5);
+                break;
+                case 5: printf("%d MS\n",n+3);
+                break;
+                case 6: printf("%d WS\n",n+1);
+                break;
+                case 7: printf("%d WS\n",n-1);
+                break;
+                case 8: printf("%d MS\n",n-3);
+                break;
+                case 9: printf("%d AS\n",n-5);
+                break;
+                case 10: printf("%d AS\n",n-7);
+                break;
+                case 11: printf("%d MS\n",n-9);
+                break;
+                case 0: printf("%d WS\n",n-11);
+                break;
+                }
+        }
 }

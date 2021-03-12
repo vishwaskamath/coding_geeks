@@ -1,0 +1,42 @@
+#include<stdio.h>
+main()
+
+{    
+
+   int t;   
+
+   int n;   
+
+   scanf("%d",&t);   
+
+   for(int z=1;z<=t;z++)    
+
+ {        
+
+   scanf("%d",&n);       
+
+   for(int i=1;i<=n;i++)       
+
+  {            
+
+    for(int j=1;j<=2*n;j++)           
+
+    {               
+
+       if(j<=i||j>2*n-i)                   
+
+            printf("*");                
+
+       else                    
+
+            printf("#");            
+
+    }            
+
+     printf("\n");      
+
+  }
+
+ }
+
+}

@@ -1,0 +1,29 @@
+#include<stdio.h>
+main()
+{
+	int c[11],i,sum=0,flag =0;
+	scanf("%s",&c);
+	if(strlen(c)!=10)
+	{
+		
+		flag = 1;
+	}
+	for(i=1;i<=strlen(c);i++)
+	{
+		sum = sum + (i*c[i]);
+	}
+	if(sum%11==0)
+	{
+		flag = 0;
+
+	}
+	if(flag==1)
+	{
+		printf("Illegal ISBN");
+	}
+	else
+	{
+		printf("Legal ISBN");
+	}
+	
+}

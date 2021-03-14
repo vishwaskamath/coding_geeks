@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+	int i,t,k,m,n,count,x;
+	scanf("%d",&t);
+	for(i=0;i<t;i++)
+	{
+		count = 0;
+		x=0;
+		scanf("%d %d %d",&k,&m,&n);
+		while(k<m)
+		{	
+			if(m%n==0)
+			{
+				m=m/n;
+				count++;
+			}
+
+			else
+			{ 
+				x=(n-(m%n));
+				m+=(n-(m%n))/2*2+(n-(m%n))%2;
+				count+=x/2+x%2;
+			}
+		}
+		if(k>m)
+		{
+			count+=(k-m)/2+(k-m)%2;
+		}
+		printf("%d\n",count);
+	}
+
+}

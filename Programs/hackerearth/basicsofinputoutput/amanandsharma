@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+int main(){
+
+    long long int d,r,x,count=0,dis,range;
+
+    scanf("%lld",&d);
+
+    while(d--){
+
+        scanf("%lld %lld",&r,&x);
+
+         dis=2*22*r/7;
+
+         range=100*x;
+
+        if(dis<=range){
+
+            count++;
+
+        }
+
+    }
+
+    printf("%lld",count);
+
+    return 0;
+
+}

@@ -1,0 +1,37 @@
+#include <stdio.h>
+int main()
+
+{
+
+int bricks, placed=0;
+
+scanf("%d",&bricks);
+
+for(int i=1;i<=bricks; i++)
+
+{
+
+    placed+=i;
+
+    if(placed>=bricks){
+    printf("Patlu");
+    break;
+
+    }
+
+placed+=2*i;
+
+if(placed>=bricks)
+
+{
+
+printf("Motu");
+         break;
+
+}
+
+}
+
+return 0;
+
+}

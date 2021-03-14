@@ -1,0 +1,56 @@
+#include<stdio.h>
+
+#include<math.h>
+
+int main()
+
+{
+
+    long long int n,q,i,l,r,val,s;
+
+    double sum;
+
+    scanf("%lld%lld",&n,&q);
+
+    long long int arr[n+1];
+
+ 
+
+    arr[0]=0;
+
+    for(i=1;i<n+1;i++)
+
+	
+
+    {
+		scanf("%lld",&val);
+
+        arr[i]=val+arr[i-1];
+
+    }
+
+   
+
+    while(q--)
+
+    {
+
+         scanf("%lld%lld",&l,&r);
+
+        
+
+        sum=((double)(arr[r]-arr[l-1]))/(r-l+1);
+
+    
+
+        s=floor(sum);
+
+        printf("%lld\n",s);
+
+}
+
+    
+
+    return 0;
+
+}

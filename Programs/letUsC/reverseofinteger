@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void) {
+	// your code goes here
+	int rev=0,remainder,n;
+	scanf("%d",&n);
+	while(n!=0)
+	{
+	    remainder = n%10;
+	    rev = rev * 10 + remainder;
+	    n = n / 10;
+	}
+	printf("%d",rev);
+	return 0;
+}
+
